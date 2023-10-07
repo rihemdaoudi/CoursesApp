@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add-course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <form #f="ngForm">
+    <ion-label>Title</ion-label>
+    <ion-input ngModel type="text" name="title"></ion-input>
+    <ion-label>Author</ion-label>
+    <ion-input ngModel type="text" name="author"></ion-input>
+    <ion-label>Image</ion-label>
+    <ion-input ngModel type="url" name="image"></ion-input>
+    <ion-label>keywords</ion-label>
+    <ion-input ngModel type="text" name="keywords"></ion-input>
+
+    <ion-button expand="block" color="success" (click)="onSubmit(f.value)">Add</ion-button>
+
+  </form>
+  <pre>
+    {{ f.value | json}}
+  </pre>
+
+</ion-content>
